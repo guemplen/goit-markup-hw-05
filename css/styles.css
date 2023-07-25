@@ -66,16 +66,19 @@ a:focus {
   list-style-type: none;
 }
 
-button:hover,
-button:focus {
-  background-color: var(--active-button);
-}
-
 button {
   cursor: pointer;
   border: none;
   background-color: var(--global-color-blue);
   color: var(--background-color-white);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button:hover,
+button:focus {
+  background-color: var(--active-button);
 }
 
 .visually-hidden {
@@ -117,6 +120,9 @@ button {
   line-height: 1.17;
   letter-spacing: 0.54px;
   color: var(--global-color-blue);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo:hover,
@@ -147,9 +153,34 @@ button {
   gap: 40px;
 }
 
+.nav-activ {
+  position: relative;
+  color: var(--active-button);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-activ::after {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  display: block;
+  content: '';
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--active-button);
+}
+
+.nav-activ:hover,
+.nav-activ:focus {
+  color: var(--active-button);
+}
+
 .header-menu {
-  margin-top: 24px;
-  margin-bottom: 24px;
+  display: inline-block;
+  margin: 24px 0;
   padding: 24px 0;
   font-size: 16px;
   font-weight: 500;
@@ -157,6 +188,9 @@ button {
   letter-spacing: 0.32px;
   background: var(--background-color-white);
   color: var(--second-text-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-menu:hover,
@@ -177,6 +211,9 @@ button {
 
 .address-color {
   color: var(--global-text-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-color:hover,
@@ -345,6 +382,9 @@ button {
   width: 100%;
   height: 100%;
   background-color: var(--global-color-blue);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link:hover,
@@ -385,6 +425,9 @@ button {
   border-radius: 4px;
   border: 1px solid var(--icon-color);
   color: var(--icon-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-link:hover,
@@ -456,10 +499,13 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
-  background-color: var(--global-color-blue);
   width: 100%;
   height: 100%;
+  border-radius: 50%;
+  background-color: var(--global-color-blue);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-link:focus,
@@ -484,13 +530,6 @@ button {
   margin-bottom: 72px;
 }
 
-.filter-button:hover,
-.filter-button:focus {
-  border: 1px solid transparent;
-  background-color: var(--active-button);
-  color: var(--background-color-white);
-}
-
 .filter-button {
   padding: 12px 24px;
   border-radius: 4px;
@@ -504,6 +543,16 @@ button {
   background-color: var(--background-color-grey);
   color: var(--global-color-blue);
   border: 1px solid var(--border-color);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  border: 1px solid transparent;
+  background-color: var(--active-button);
+  color: var(--background-color-white);
 }
 
 .portfolio-flex {
@@ -514,14 +563,17 @@ button {
   row-gap: 48px;
 }
 
+.portfolio-link {
+  display: block;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .portfolio-link:hover,
 .portfolio-link:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-}
-
-.portfolio-link {
-  display: block;
 }
 
 .portfolio-pic {
