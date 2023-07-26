@@ -150,7 +150,7 @@ button:focus {
   gap: 40px;
 }
 
-.nav-activ {
+.header-menu.nav-activ {
   position: relative;
   color: var(--active-button);
   transition-property: color;
