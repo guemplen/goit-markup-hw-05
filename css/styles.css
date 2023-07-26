@@ -709,10 +709,7 @@ button:focus {
   overflow: hidden;
 }
 
-.portfolio-link:hover .portfolio-overlay {
-  transform: translateY(0%);
-}
-
+.portfolio-link:hover .portfolio-overlay,
 .portfolio-link:focus .portfolio-overlay {
   transform: translateY(0%);
 }
