@@ -674,3 +674,26 @@ button:focus {
   letter-spacing: 0.32px;
   color: var(--global-text-color);
 }
+
+.portfolio-overlay {
+  position: absolute;
+  padding: 40px 32px 164px 32px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.32px;
+  color: var(--background-color-grey);
+  background-color: var(--global-color-blue);
+  transform: translateY(100%);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-list-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-pic:hover .portfolio-overlay {
+  transform: translateY(0%);
+}
